@@ -5,14 +5,9 @@
   <env name="ROSCONSOLE_CONFIG_FILE" 
        value="$(find geonav_transform)/config/custom_rosconsole.conf"/>
 
-  <node pkg="geonav_transform" type="geonav_transform_node" name="geonav_transform_node" clear_params="true" output="screen">
+  <node pkg="geonav_transform" type="geonav_transform_node" name="geonav_transform_node" clear_params="false" output="screen">
     <!-- Datum as latitude, longitude [decimal deg.], yaw [ENU, degrees] -->
-    <rosparam param="datum">[47.641468295410206, 122.14016405336162, -121.87298583984375]</rosparam>
-    <param name="zero_altitude" value="true"/>
-    <param name="broadcast_utm2odom_transform" value="true"/>
-    <param name="broadcast_odom2base_transform" value="true"/>
-    <param name="orientation_ned" value="false"/> 
-    
+    <!-- <rosparam param="datum">[47.6414679, 122.1401651, 0.0]</rosparam> -->
   </node>
 
   <!--
